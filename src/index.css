@@ -5,6 +5,12 @@
 
 
 }
+.stepContent{
+  padding: 7px;
+}
+.application_mainPage {
+  margin-top: 80px;
+}
 /* Basic styles for header */
 .header {
   position: fixed;
@@ -79,9 +85,19 @@
 
 @media (max-width: 1006px) {
   /* Hide desktop nav on mobile if needed */
+
   .nav-menu {
     display: none;
   }
+}
+.logo{
+  width: 45%;
+}
+.menu-icon{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+
 }
 .sidebarMaincontainer{
     width:20%;
@@ -157,4 +173,42 @@
         display: flex;
     justify-content: center;
     align-items: center;
+}
+@media(max-width:1046px){
+    .innerCard-app {
+    width: 137px;
+    height: 80px;
+}
+.sidebarMaincontainer{
+  width: 40%;
+}
+.stepContent{
+  width: 60%;
+}
+.application_mainPage{
+  gap: 4px;
+}
+.sidebarMaincontainer ul li {
+  font-size: 12px;
+}
+.sidebarMaincontainer ul{
+  padding: 8px;
+}
+      .application_mainPage {
+        margin-top: 90px;
+      }
+}
+@media(max-width:768px){
+      .application_mainPage {
+        margin-top: 90px;
+      }
+      .logo{
+        font-size: 12px;
+      }
+      .sidebarMaincontainer h2 {
+        font-size: 14px;
+      }
+      .ApplicationTypeMainContainer h2{
+        font-size: 14px;
+      }
 }

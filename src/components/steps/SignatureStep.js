@@ -11,16 +11,16 @@ export default function SignatureStep() {
   };
 
   return (
-    <div className="p-6">
-      <h2 className="text-xl font-bold mb-4">Signature</h2>
+    <div className="">
+      <h2 className="">Signature</h2>
       <input
         type="text"
         placeholder="Type your full name as signature"
         value={signature}
         onChange={(e) => setSignature(e.target.value)}
-        className="border p-2 rounded w-full mb-2"
+        className=""
       />
-      <button className="bg-red-600 text-white px-6 py-2 rounded" onClick={handleNext}>
+      <button className="" onClick={handleNext}>
         Save & Continue
       </button>
     </div>

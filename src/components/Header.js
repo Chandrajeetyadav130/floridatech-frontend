@@ -66,8 +66,8 @@ const Header = () => {
       {/* Sidebar for mobile */}
       <div className={`sidebar ${sidebar ? 'open' : ''}`} ref={sidebarRef}>
         <ul>
-          <li onClick={() => setSideBar(false)}><a href="#about">FTU Website</a></li>
-          <li onClick={() => setSideBar(false)}><a href="#skills">Payment</a></li>
+          <li onClick={() => setSideBar(false)}><a href="#FTU">FTU Website</a></li>
+          <li onClick={() => setSideBar(false)}><a href="#Payment">Payment</a></li>
         </ul>
       </div>
     </header>

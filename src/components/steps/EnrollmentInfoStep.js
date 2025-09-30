@@ -23,8 +23,8 @@ export default function EnrollmentInfoStep() {
           className="border p-2 rounded w-full"
         />
       </div>
-      <div className="mb-4">
-        <label className="block">Enrollment Type</label>
+      <div className="">
+        <label className="">Enrollment Type</label>
         <select
           value={enrollmentType}
           onChange={(e) => setEnrollmentType(e.target.value)}
@@ -35,7 +35,7 @@ export default function EnrollmentInfoStep() {
           <option value="Part-Time">Part-Time</option>
         </select>
       </div>
-      <button className="bg-red-600 text-white px-6 py-2 rounded" onClick={handleNext}>
+      <button className="" onClick={handleNext}>
         Save & Continue
       </button>
     </div>

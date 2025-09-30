@@ -3,6 +3,8 @@ import axios from "axios";
 import { useApplication } from "../../context/ApplicationContext";
 
 export default function ReviewStep() {
+  const renderUrl="https://floridatech.onrender.com"
+  // const localUrl="http://localhost:5000/api/applications"
   const { formData } = useApplication();
 
   const handleSubmit = async () => {
@@ -16,7 +18,7 @@ export default function ReviewStep() {
     });
 
     try {
-      const res = await axios.post("http://localhost:5000/api/applications", form, {
+      const res = await axios.post(`${renderUrl}/api/applications`, form, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Application submitted successfully!");

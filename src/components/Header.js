@@ -6,6 +6,7 @@ const Header = () => {
   const [mobile, setMobile] = useState(false);
   const [sidebar, setSideBar] = useState(false);
   const sidebarRef = useRef(null);
+  const iconRef = useRef(null);
 
   // Detect screen size
   useEffect(() => {
@@ -26,7 +27,12 @@ const Header = () => {
   // Close sidebar on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target) &&
+        iconRef.current &&
+        !iconRef.current.contains(event.target)
+      ) {
         setSideBar(false);
       }
     };
@@ -37,6 +43,19 @@ const Header = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [sidebar]);
+   // Prevent background scroll when sidebar is open
+  useEffect(() => {
+    if (sidebar) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // cleanup on unmount
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [sidebar]);
 
   return (
     <header className="header">
@@ -44,7 +63,7 @@ const Header = () => {
 
       {/* Hamburger icon for mobile */}
       {mobile && (
-        <div className="menu-icon" ref={sidebarRef}>
+        <div className="menu-icon" ref={iconRef}>
           {sidebar ? (
             <IoMdClose size={30} onClick={() => setSideBar(false)} />
           ) : (
@@ -66,8 +85,8 @@ const Header = () => {
       {/* Sidebar for mobile */}
       <div className={`sidebar ${sidebar ? 'open' : ''}`} ref={sidebarRef}>
         <ul>
-          <li onClick={() => setSideBar(false)}><a href="#FTU">FTU Website</a></li>
-          <li onClick={() => setSideBar(false)}><a href="#Payment">Payment</a></li>
+          <li><a href="#FTU">FTU Website</a></li>
+          <li><a href="#Payment">Payment</a></li>
         </ul>
       </div>
     </header>

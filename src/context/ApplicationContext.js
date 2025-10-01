@@ -53,10 +53,12 @@ const isStepCompleted = (index) => {
   }
 };
 
-
+  const resetFormData = () => {
+    setFormData({}); // clears everything
+  };
 
   return (
-    <ApplicationContext.Provider value={{ step, setStep, formData, updateFormData,isStepCompleted }}>
+    <ApplicationContext.Provider value={{ step, setStep, formData, updateFormData,isStepCompleted,resetFormData }}>
       {children}
     </ApplicationContext.Provider>
   );

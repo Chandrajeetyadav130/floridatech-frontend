@@ -8,7 +8,7 @@ export default function ReviewStep() {
   const [isSubmitting, setIsSubmitting] = useState(false); // loading state
   // const API_URL="process.env.REACT_APP_API_URL;"
   // const localUrl="http://localhost:5000/api/applications"
-  const { formData } = useApplication();
+  const { formData,resetFormData } = useApplication();
 
   // const handleSubmit = async () => {
   //   const form = new FormData();
@@ -67,7 +67,7 @@ export default function ReviewStep() {
         }
       );
       alert("Application submitted successfully!");
-      console.log(res.data);
+      // console.log(res.data);
     } catch (err) {
       console.error(err);
       alert("Error submitting application");

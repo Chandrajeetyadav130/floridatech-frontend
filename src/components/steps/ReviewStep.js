@@ -1,9 +1,11 @@
 import React from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useApplication } from "../../context/ApplicationContext";
 
 export default function ReviewStep() {
-  const renderUrl="https://floridatech.onrender.com"
+  const renderUrl = "https://floridatech.onrender.com"
+  const [isSubmitting, setIsSubmitting] = useState(false); // loading state
   // const API_URL="process.env.REACT_APP_API_URL;"
   // const localUrl="http://localhost:5000/api/applications"
   const { formData } = useApplication();
@@ -45,7 +47,7 @@ export default function ReviewStep() {
       alert(`Please fill all required fields: ${emptyFields.join(", ")}`);
       return; // Stop submission
     }
-
+    setIsSubmitting(true);
     // 2️⃣ Submit form
     const form = new FormData();
     Object.keys(formData).forEach((key) => {
@@ -70,13 +72,19 @@ export default function ReviewStep() {
       console.error(err);
       alert("Error submitting application");
     }
+     finally {
+      setIsSubmitting(false); // reset loading state
+    }
   };
   return (
     <div className="">
       <h2 className="">Review Your Application</h2>
       <pre className="">{JSON.stringify(formData, null, 2)}</pre>
-      <button className="" onClick={handleSubmit}>
-        Submit Application
+      <button
+      disabled={isSubmitting} 
+      className="submit-btn"
+      onClick={handleSubmit}>
+       {isSubmitting ? "Wait..." : "Submit Application"}
       </button>
     </div>
   );

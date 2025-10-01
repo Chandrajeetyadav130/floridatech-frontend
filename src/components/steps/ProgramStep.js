@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useApplication } from "../../context/ApplicationContext";
 
 export default function ProgramStep() {
   const { formData, updateFormData, setStep } = useApplication();
-    const degreeOptions = [
+
+  const degreeOptions = [
     "Master of science in Computer Science (MSCS)",
     "Master of business adminstration (MBA)",
     "Bachelor of Science in Computer science",
@@ -12,6 +13,11 @@ export default function ProgramStep() {
     "Doctorate in Business Administraiton",
   ];
   const [program, setProgram] = useState(formData.program || "");
+  const [isFilled, setIsFilled] = useState(false);
+  // Check if user selected a degree
+  useEffect(() => {
+    setIsFilled(program !== "");
+  }, [program]);
 
   const handleNext = () => {
     updateFormData("program", program);
@@ -19,22 +25,27 @@ export default function ProgramStep() {
   };
 
   return (
-    <div className="p-6">
-      <h2 className="text-xl font-bold mb-4">Program of Study</h2>
-  
-            <select
-        value={program}
-        onChange={(e) => setProgram(e.target.value)}
-        className="border p-2 rounded w-full"
-      >
-        <option value="" disabled>Select a degree</option>
-        {degreeOptions.map((degree, index) => (
-          <option key={index} value={degree}>
-            {degree}
-          </option>
-        ))}
-      </select>
-      <button className="mt-6 bg-red-600 text-white px-6 py-2 rounded" onClick={handleNext}>
+    <div className="program-container">
+      <h2 className="program-title">Program of Study</h2>
+      <div className="form-group">
+        <select
+          value={program}
+          onChange={(e) => setProgram(e.target.value)}
+          className="form-input"
+        >
+          <option value="" disabled>Select a degree</option>
+          {degreeOptions.map((degree, index) => (
+            <option key={index} value={degree}>
+              {degree}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <button
+        disabled={!isFilled}
+        className={`save-btn ${isFilled ? "filled" : ""}`}
+        onClick={handleNext}>
         Save & Continue
       </button>
     </div>

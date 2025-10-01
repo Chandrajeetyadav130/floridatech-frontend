@@ -61,7 +61,9 @@
   z-index: 1000;
   padding: 20px;
 }
-
+.sidebarMaincontainer ul{
+  padding: 8px;
+}
 .sidebar.open {
   transform: translateX(0);
 }
@@ -104,6 +106,8 @@
     background-color: #FFFF;
  border: 1px solid #e5e0e0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  overflow-y: auto; 
 }
 .sidebarMaincontainer h2{
     text-align: center;
@@ -212,3 +216,628 @@
         font-size: 14px;
       }
 }
+/* enrollmentstepcss */
+/* Container */
+.enrollment-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.enrollment-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Inputs and select */
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #f00; /* red border on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Save button */
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #ccc; /* default gray */
+  color: #fff;
+  cursor: not-allowed;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+/* When form is filled */
+.save-btn.filled {
+  background-color: red;
+  cursor: pointer;
+}
+
+.save-btn.filled:hover {
+  background-color: darkred;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .enrollment-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .enrollment-title {
+    font-size: 20px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+/* program step css */
+/* Container */
+.program-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.program-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Select input */
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #f00; /* red border on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Save button */
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #ccc; /* default gray */
+  color: #fff;
+  cursor: not-allowed;
+  transition: background-color 0.3s;
+}
+
+/* When degree is selected */
+.save-btn.filled {
+  background-color: red;
+  cursor: pointer;
+}
+
+.save-btn.filled:hover {
+  background-color: darkred;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .program-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .program-title {
+    font-size: 20px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+/* personalbackground */
+/* Container */
+.personal-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.personal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Inputs and select */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #f00;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Save button */
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #ccc; /* default gray */
+  color: #fff;
+  cursor: not-allowed;
+  transition: background-color 0.3s;
+}
+
+/* Button when all fields are filled */
+.save-btn.filled {
+  background-color: red;
+  cursor: pointer;
+}
+
+.save-btn.filled:hover {
+  background-color: darkred;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .personal-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .personal-title {
+    font-size: 20px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+/* EducuationHistorysteps */
+/* Container */
+.education-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.education-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Each education entry */
+.education-entry {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #f00;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Add More button */
+.add-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #bbb;
+}
+
+/* Save button */
+.save-btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #ccc; /* default gray */
+  color: #fff;
+  cursor: not-allowed;
+  transition: background-color 0.3s;
+}
+
+/* When at least one education entry is filled */
+.save-btn.filled {
+  background-color: red;
+  cursor: pointer;
+}
+
+.save-btn.filled:hover {
+  background-color: darkred;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .education-title {
+    font-size: 20px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .add-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+/* uploaddocument */
+/* Container */
+.upload-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.upload-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* File input */
+.form-input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #f00;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Save button */
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #ccc; /* default gray */
+  color: #fff;
+  cursor: not-allowed;
+  transition: background-color 0.3s;
+}
+
+/* When both files are selected */
+.save-btn.filled {
+  background-color: red;
+  cursor: pointer;
+}
+
+.save-btn.filled:hover {
+  background-color: darkred;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .upload-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .upload-title {
+    font-size: 20px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+/* Emergencycontact */
+/* Container */
+.emergency-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.emergency-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input fields */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #f00;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Save button */
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #ccc; /* default gray */
+  color: #fff;
+  cursor: not-allowed;
+  transition: background-color 0.3s;
+}
+
+/* When all fields are filled */
+.save-btn.filled {
+  background-color: red;
+  cursor: pointer;
+}
+
+.save-btn.filled:hover {
+  background-color: darkred;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .emergency-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .emergency-title {
+    font-size: 20px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+/* signature  */
+/* Container */
+.signature-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.signature-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input field */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #f00;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Save button */
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #ccc; /* default gray */
+  color: #fff;
+  cursor: not-allowed;
+  transition: background-color 0.3s;
+}
+
+/* When signature is filled */
+.save-btn.filled {
+  background-color: red;
+  cursor: pointer;
+}
+
+.save-btn.filled:hover {
+  background-color: darkred;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .signature-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .signature-title {
+    font-size: 20px;
+  }
+
+  .form-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
